@@ -1,0 +1,28 @@
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<VBox spacing="10" alignment="CENTER" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.pcc_actualizado.PedidosController">
+  <Label text="Gestión de Pedidos en Línea" style="-fx-font-size: 18px;"/>
+
+  <HBox spacing="15">
+    <VBox>
+      <Label text="Pedidos en Cola"/>
+      <ListView fx:id="pedidosListView"/>
+    </VBox>
+    <VBox>
+      <Label text="Pedidos Tomados por Repartidores"/>
+      <ListView fx:id="pedidosTomadosListView"/>
+    </VBox>
+  </HBox>
+
+  <TextArea fx:id="outputTextArea" editable="false" wrapText="true" prefHeight="200"/>
+
+  <HBox spacing="10">
+    <Button text="Iniciar Productor" onAction="#iniciarProductor"/>
+    <Button text="Iniciar Consumidor" onAction="#iniciarConsumidor"/>
+  </HBox>
+</VBox>
